@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\userCon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/userdata',[userCon::class,'showUser']);
+Route::post('/userInfo',[userCon::class,'saveUser']);
+Route::get('/userInfo/{id}',[userCon::class,'editUser']);
+Route::patch('/saveuserInfo/{id}',[userCon::class,'saveeditUser']);
