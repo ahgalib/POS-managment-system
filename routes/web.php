@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userCon;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,7 @@ Route::get('/userdata',[userCon::class,'showUser']);
 Route::post('/userInfo',[userCon::class,'saveUser']);
 Route::get('/userInfo/{id}',[userCon::class,'editUser']);
 Route::patch('/saveuserInfo/{id}',[userCon::class,'saveeditUser']);
+Route::delete('/deleteuserInfo/{id}',[userCon::class,'deleteeditUser']);
+//Product Route
+Route::get('/product',[ProductController::class,'index']);
+Route::post('/saveproduct',[ProductController::class,'store']);

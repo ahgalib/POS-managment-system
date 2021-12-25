@@ -34,4 +34,11 @@ class userCon extends Controller
         $data->update($req->all());
         return redirect('/userdata');
     }
+
+    public function deleteeditUser(Request $req,$id){
+        $data = User::find($id);
+        $data->delete($req->all());
+        return redirect('/userdata');
+    }
+
 }

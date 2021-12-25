@@ -1,7 +1,7 @@
 <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline rounded-pill">|||</a>
-<a href="/" class="btn btn-outline rounded-pill">home</a>
+<a href="/" class="btn btn-outline rounded-pill">Home</a>
 <a href="/userdata" class="btn btn-outline rounded-pill">User</a>
-<a href="" class="btn btn-outline rounded-pill">Product</a>
+<a href="/product" class="btn btn-outline rounded-pill">Product</a>
 <a href="" class="btn btn-outline rounded-pill">Cashier</a>
 <a href="" class="btn btn-outline rounded-pill">Report</a>
 <a href="" class="btn btn-outline rounded-pill">Transactions</a>
