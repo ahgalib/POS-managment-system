@@ -63,7 +63,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $data = Product::find($product);
+        return view('product.product',['product'=>$data]);
     }
 
     /**
@@ -73,9 +74,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Product $product,$id)
     {
-        //
+        $data = Product::find($id);
+        $data->update($request->all());
+        return back();
     }
 
     /**
@@ -84,8 +87,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $product,Request $request,$id)
     {
-        //
+        $data = Product::find($id);
+        $data->delete($request->all());
+        return back();
     }
 }

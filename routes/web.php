@@ -29,3 +29,6 @@ Route::delete('/deleteuserInfo/{id}',[userCon::class,'deleteeditUser']);
 //Product Route
 Route::get('/product',[ProductController::class,'index']);
 Route::post('/saveproduct',[ProductController::class,'store']);
+Route::get('/product/{porduct}',[ProductController::class,'edit']);
+Route::patch('/updateproduct/{id}',[ProductController::class,'update']);
+Route::delete('/deleteproduct/{id}',[ProductController::class,'destroy']);
