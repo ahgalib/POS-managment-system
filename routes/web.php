@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userCon;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +33,7 @@ Route::post('/saveproduct',[ProductController::class,'store']);
 Route::get('/product/{porduct}',[ProductController::class,'edit']);
 Route::patch('/updateproduct/{id}',[ProductController::class,'update']);
 Route::delete('/deleteproduct/{id}',[ProductController::class,'destroy']);
+
+//Cashier Route
+Route::get('/cashier',[orderController::class,'index']);
+
