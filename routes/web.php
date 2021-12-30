@@ -34,6 +34,6 @@ Route::get('/product/{porduct}',[ProductController::class,'edit']);
 Route::patch('/updateproduct/{id}',[ProductController::class,'update']);
 Route::delete('/deleteproduct/{id}',[ProductController::class,'destroy']);
 
-//Cashier Route
+//Cashier and Order Route
 Route::get('/cashier',[orderController::class,'index']);
 

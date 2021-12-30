@@ -16,7 +16,8 @@ class OrderController extends Controller
     public function index()
     {
          $data = Product::all();
-        return view('cashier.index',['product'=>$data]);
+         $order = Order::all();
+        return view('cashier.index',['product'=>$data,'order'=>$order]);
           
         
     }
